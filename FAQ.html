@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/AventuraPeLogo.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/9099537b6d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styleFAQ.css">
+    <title>AventuraPE | FAQ</title>
+</head>
+<body>
+    <header>
+        <img src="assets/AventuraPeLogo.png" alt="Aventurela Logo" class="logo">
+        <nav>
+            <a href="index.html">Emprendedor</a>
+            <a href="FAQ.html">Preguntas frecuentes</a>
+            <a href="#descarga">Descargar</a>
+        </nav>
+    </header>
+    <div class="FAQ">
+        <h1>Preguntas frecuentes</h1>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">Pregunta 1</div>
+                <div class="faq-answer">
+                    <p>Respuesta a la pregunta 1...</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Pregunta 2</div>
+                <div class="faq-answer">
+                    <p>Respuesta a la pregunta 2...</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Pregunta 3</div>
+                <div class="faq-answer">
+                    <p>Respuesta a la pregunta 3...</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Pregunta 4</div>
+                <div class="faq-answer">
+                    <p>Respuesta a la pregunta 4...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="descarga" class="download-section"></div>
+        <h2 class="download-title">¿Qué esperas para unirte a la aventura?
+            <br> Descarga la app móvil y empieza tu aventura</h2>
+        <div class="store-buttons">
+            <a href="https://www.apple.com/app-store/" class="store-button apple-store" target="_blank">
+                <img src="assets/appstore.png" alt="Descargar en Apple Store">
+            </a>
+            <a href="https://play.google.com/store" class="store-button google-play" target="_blank">
+                <img src="assets/playstore.png" alt="Descargar en Google Play">
+            </a>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-column">
+            <img src="assets/AventuraPeLogo.png" alt="Aventurate Logo" class="logo">
+        </div>
+        <div class="footer-column">
+            <div class="cofundadores">
+                <h3>Cofundadores</h3>
+                Jimena Tamara Cama Salvatierra<br>
+                Kalid Palacios Jauregui<br>
+                Barbara Susana Quezada Portalatico<br>
+                Aldo Alberto Baldeon Fabian<br>
+                Alexander Jair Castillo Castillo<br><br>
+                <a href="https://twitter.com" target="_blank" ><img src="assets/twitter.png" alt="twitter" class="social-button"></a>
+                <a href="https://facebook.com" target="_blank"><img src="assets/facebook.png" alt="facebook" class="social-button"></a>
+                <a href="https://instagram.com" target="_blank"><img src="assets/instagram.png" alt="instagram" class="social-button"></a>
+                <a href="https://youtube.com"target="_blank"><img src="assets/youtube.png" alt="youtube" class="social-button"></a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <p class="copyright">© Copyright Derechos restringidos | Perú</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isOpen = question.classList.contains('active');
+                
+                // Cerrar todas las respuestas
+                document.querySelectorAll('.faq-question').forEach(q => {
+                    q.classList.remove('active');
+                    q.nextElementSibling.style.maxHeight = null;
+                });
+
+                // Abrir/cerrar la respuesta clickeada
+                if (!isOpen) {
+                    question.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
