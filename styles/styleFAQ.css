@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --color-primary: #FFC940;
+    --color-secondary: #765532;
+    --color-background: #FCF1DF;
+    --white: #ffffff;
+    --transparent-brown: #b7722962;
+}  
+body {
+    font-family: Poppins, sans-serif;
+    background-color: #f7f3e8;
+    margin: 0;
+    padding: 20px;
+}
+.FAQ {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+h1 {
+    color: var(--color-secondary);
+    text-align: center;
+}
+.faq-item {
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+}
+.faq-question {
+    background-color: #f0e6d2;
+    color: var(--color-secondary);
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s;
+}
+.faq-question:hover {
+    background-color: #e6d8b5;
+}
+.faq-question::after {
+    content: '\25BC';
+    position: absolute;
+    right: 15px;
+    transition: transform 0.3s;
+}
+.faq-question.active::after {
+    transform: rotate(180deg);
+}
+.faq-answer {
+    padding: 0 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0e6d2;
+}
+.logo {
+    font-weight: bold;
+    color: ;
+}
+.button {
+    background-color: var(--color-background);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+footer {
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.footer-column img {
+    padding-left: 2.5em;
+    height: 10em;
+    width:fit-content;
+    margin-bottom: 10px;
+}
+.cofundadores {
+    font-size: 14px;
+    line-height: 1.5;
+}
+.cofundadores h3 {
+    margin-top: 0;
+}
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.cofundadores img {
+    width:fit-content;
+    height: 2.5em;
+}
+.copyright {
+    font-size: 12px;
+    margin-top: auto;
+}
